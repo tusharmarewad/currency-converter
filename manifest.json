@@ -1,0 +1,11 @@
+{
+    "version": "1.0",
+    "manifest_version": 3,
+    "name": "Currency Converter",
+    "action": {
+        "default_popup": "currency.html"
+    },
+    "permissions": [
+        "tabs"
+    ]
+}
