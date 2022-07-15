@@ -1,5 +1,5 @@
 
-# Currency convertor using js
+# Currency converter using js
 
 select the countries to exchage the amount of currency.
 
