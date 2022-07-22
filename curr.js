@@ -25,6 +25,8 @@ btn.addEventListener("click", () => {
     if (currency1 != currency2) {
         convert(currency1, currency2, value);
     } else {
+        num.value = '';
+        ans.value = ''; 
         alert("Choose Different Currencies !!!");
     }
 });
