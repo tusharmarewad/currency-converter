@@ -5,12 +5,15 @@ const ans = document.getElementById("ans");
 
 fetch("https://api.frankfurter.app/currencies")
     .then((data) => data.json())
-    .then((data) => {
+    .then((data) => {    
         display(data);
     });
 
 function display(data) {
+    //Object.entries() method return an array with  key values enumerable (counted) properties of an object.
     const entries = Object.entries(data);
+  //  console.log("getting array", entries);
+    //console.log("getting curriency", entries[0][0]);
     for (var i = 0; i < entries.length; i++) {
         select[0].innerHTML += `<option value="${entries[i][0]}">${entries[i][0]}</option>`;
         select[1].innerHTML += `<option value="${entries[i][0]}">${entries[i][0]}</option>`;
@@ -38,7 +41,8 @@ function convert(currency1, currency2, value) {
     )
         .then((val) => val.json())
         .then((val) => {
-            console.log(Object.values(val.rates)[0]);
+           // console.log("getting values",val); //which return object with properties
+            console.log(Object.values(val.rates)[0]); // Object.values() method return the array of values of properties of object.
             ans.value = Object.values(val.rates)[0];
         });
 }
